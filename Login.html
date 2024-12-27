@@ -1,0 +1,140 @@
+<html>
+ <head>
+  <title>
+   Login Page
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e8f8e8;
+        }
+        .container {
+            display: flex;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 900px;
+            width: 100%;
+        }
+        .image-section {
+            background-color: #e8f8e8;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+        }
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+        }
+        .form-section {
+            padding: 40px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-section img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        .form-section h2 {
+            margin: 0;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .form-section form {
+            width: 100%;
+        }
+        .form-section form .input-group {
+            margin-bottom: 20px;
+        }
+        .form-section form .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        .form-section form .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-section form .input-group input:focus {
+            outline: none;
+            border-color: #a3d39c;
+        }
+        .form-section form .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #a3d39c;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .form-section form .login-btn:hover {
+            background-color: #8bbf7a;
+        }
+        .form-section .register-link {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .form-section .register-link a {
+            color: #a3d39c;
+            text-decoration: none;
+        }
+        .form-section .register-link a:hover {
+            text-decoration: underline;
+            color: brown;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="image-section">
+    <img alt="Illustration of a person jogging with fitness tracking elements in the background" height="400" src="https://storage.googleapis.com/a1aa/image/LZOaAYY4zcZ5F9bx7KfCDrmsg6nPX9csbBz8P0ZTZLI0yeenA.jpg" width="400"/>
+   </div>
+   <div class="form-section">
+    <img alt="Company logo" height="100" src="https://storage.googleapis.com/a1aa/image/V1pxtRNLuLpnOVSujJZseffN80JAeRLawYLkuxlwdzxrW27PB.jpg" width="100"/>
+    <h2>
+     Welcome Back!
+    </h2>
+    <form>
+     <div class="input-group">
+      <label for="username">
+       Username
+      </label>
+      <input id="username" name="username" type="text"/>
+     </div>
+     <div class="input-group">
+      <label for="password">
+       Password
+      </label>
+      <input id="password" name="password" type="password"/>
+     </div>
+     <button class="login-btn" type="submit">
+      Login
+     </button>
+    </form>
+    <div class="register-link">
+     Don't have an account?
+     <a href="RegisterForm.html">
+      Register
+     </a>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
