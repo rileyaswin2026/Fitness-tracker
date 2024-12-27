@@ -1,0 +1,359 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Dashboard
+  </title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .sidebar {
+            width: 80px;
+            background-color: #e0f7e9;
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .sidebar img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 20px;
+        }
+        .sidebar a {
+            color: #4caf50;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 24px;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+        }
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .subscribe {
+            background-color: #1be491;
+            color: #0d0e0e;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+           
+        }
+        .subscribe:hover {
+            background-color: #c3e6cb;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            gap: 1rem;
+            
+        }
+        .stat-card1 {
+            background-color: rgb(28, 180, 94);
+            border-radius: 10px;
+            padding: 20px;
+            width: 23%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .stat-card2 {
+            background-color: rgb(39, 126, 188);
+            border-radius: 10px;
+            padding: 20px;
+            width: 23%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .stat-card3 {
+            background-color: rgb(214, 144, 38);
+            border-radius: 10px;
+            padding: 20px;
+            width: 23%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .stat-card4 {
+            background-color: rgb(209, 59, 59);
+            border-radius: 10px;
+            padding: 20px;
+            width: 23%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .stat-card h2 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .stat-card p {
+            font-size: 14px;
+            color: #888;
+        }
+        .activity, .progress {
+            background-color: rgb(212, 216, 146);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .activity h2, .progress h2 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .activity .chart, .progress .chart {
+            margin-top: 20px;
+        }
+        .recommended-trainers, .meals {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .trainer-card, .meal-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 48%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .trainer-card img, .meal-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .trainer-card h3, .meal-card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        .trainer-card p, .meal-card p {
+            font-size: 14px;
+            color: #888;
+        }
+        .profile {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .profile h2 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .profile p {
+            font-size: 14px;
+            color: #888;
+        }
+        .goals, .schedule {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .goals h2, .schedule h2 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .goals p, .schedule p {
+            font-size: 14px;
+            color: #888;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="sidebar">
+    <img alt="Logo" height="40" src="https://storage.googleapis.com/a1aa/image/SbiBbOmZQnYGJJHAFq3lvQeRsHdrgN3OuNfwGx7AAMwNIe9nA.jpg" width="40"/>
+    <a href="#">
+     <i class="fas fa-home">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fas fa-user">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fas fa-chart-bar">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fas fa-cog">
+     </i>
+    </a>
+   </div>
+   <div class="main-content">
+    <div class="header1">
+     <h2>
+      Good Morning</h2></div>
+      <div>
+        <h1>
+            Welcome Back 🎉 
+          </h1>
+      </div>
+     <div><h2>
+        <a class="subscribe" href="#">
+       Subscribe 
+     </a>
+    </h2>
+    </div>
+    <div class="stats">
+     <div class="stat-card1">
+      <h2>
+        <i class="fa-thin fa-person-walking"></i> Steps
+      </h2>
+      <p>
+       0 Steps
+      </p>
+      <p>
+       0% of your goals
+      </p>
+     </div>
+     <div class="stat-card2">
+      <h2>
+       Water
+      </h2>
+      <p>
+       0 Liters
+      </p>
+     </div>
+     <div class="stat-card3">
+      <h2>
+       Calories
+      </h2>
+      <p>
+       Today
+      </p>
+     </div>
+     <div class="stat-card4">
+      <h2>
+       Heart Rate
+      </h2>
+      <p>
+       75 bpm
+      </p>
+     </div>
+    </div>
+    <div class="activity">
+     <h2>
+      Activity
+     </h2>
+     <div class="chart">
+      <img alt="Activity Chart" height="150" src="https://storage.googleapis.com/a1aa/image/cRENJyot3xpTHp8Y5UClwKKHmie3v7yK3vqPql9HngHGEfenA.jpg" width="300"/>
+     </div>
+    </div>
+    <div class="progress">
+     <h2>
+      Progress
+     </h2>
+     <div class="chart">
+      <img alt="Progress Chart" height="150" src="https://storage.googleapis.com/a1aa/image/XYLzyYIRuQ4iGpDk3NYmy1r2VBDpodDtHNGLbrn3bRoBivfJA.jpg" width="300"/>
+     </div>
+    </div>
+    <div class="recommended-trainers">
+     <div class="trainer-card">
+      <img alt="Trainer Image" height="150" src="https://storage.googleapis.com/a1aa/image/FLKwb6S1Bx62EpqG8e5wt2vlGHOfemoOMoxEB9e6s77rg47PB.jpg" width="150"/>
+      <h3>
+       Cameron Williamson
+      </h3>
+      <p>
+       Fitness Specialist
+      </p>
+     </div>
+     <div class="trainer-card">
+      <img alt="Trainer Image" height="150" src="https://storage.googleapis.com/a1aa/image/FLKwb6S1Bx62EpqG8e5wt2vlGHOfemoOMoxEB9e6s77rg47PB.jpg" width="150"/>
+      <h3>
+       Cameron Williamson
+      </h3>
+      <p>
+       Fitness Specialist
+      </p>
+     </div>
+    </div>
+    <div class="meals">
+     <div class="meal-card">
+      <img alt="Meal Image" height="150" src="https://storage.googleapis.com/a1aa/image/3FAXqsqswUJ1DVLpQuhs1pQVHHSYeKb13a5OO28e2JOIIe9nA.jpg" width="150"/>
+      <h3>
+       Avocado Salad
+      </h3>
+      <p>
+       8% carbs, 16% protein, 8% fat
+      </p>
+     </div>
+     <div class="meal-card">
+      <img alt="Meal Image" height="150" src="https://storage.googleapis.com/a1aa/image/3FAXqsqswUJ1DVLpQuhs1pQVHHSYeKb13a5OO28e2JOIIe9nA.jpg" width="150"/>
+      <h3>
+       Blueberry
+      </h3>
+      <p>
+       8% carbs, 16% protein, 6% fat
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="profile">
+    <h2>
+     Username
+    </h2>
+    <p>
+     Location
+    </p>
+    <p>
+     0% your Profile set
+    </p>
+    <p>
+     0 kg Weight
+    </p>
+    <p>
+     0 Height
+    </p>
+    <p>
+     0 yrs Age
+    </p>
+    <a class="edit-profile" href="#">
+     Edit your profile
+    </a>
+   </div>
+   <div class="goals">
+    <h2>
+     Your Goals
+    </h2>
+    <p>
+     Running
+    </p>
+    <p>
+     Sleeping
+    </p>
+    <p>
+     Weight Loss
+    </p>
+   </div>
+   <div class="schedule">
+    <h2>
+     Scheduled
+    </h2>
+    <p>
+     Training - Yoga Class
+    </p>
+    <p>
+     Training - Swimming
+    </p>
+   </div>
+  </div>
+ </body>
+</html>
